@@ -19,7 +19,7 @@ jobs:
         with:
           sarif_file: snyk.sarif
       - name: Create artifact of test coverage
-        if: steps.scan.outcome == 'success'
+        if: always()
         uses: ihiroky/archive-action@v1
         with:
           root_dir: root
